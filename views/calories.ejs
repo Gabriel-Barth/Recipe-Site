@@ -1,0 +1,35 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<form method="POST" action="/calories" class="col-md-6 offset-md-3">
+  <div class="col-md-6 offset-md-3">
+    <input type="search" name="pesquisarTermo" class="inputizinpersonalite" class="form-control"
+      placeholder="Pesquise uma receita..." aria-label="Procurar">
+  </div>
+
+
+</form>
+
+<div class="row row-cols-2 row-cols-lg-5 g2 g-lg-3 mb-4">
+
+
+  <% if (typeof Data !=='undefined' && Data.length> 0) { %>
+
+     <% for(var i=0; i<10; i++) {%>
+
+      <a href="<%= dado.hits[i].recipe.label %> " class="col text-center categorias_link">
+        <div class="categorias_img shadow">
+          <img src="<%= dado.hits[i].recipe.image %> " alt="<%=  dado.hits[i].recipe.label  %> " loading="lazy">
+        </div>
+        <div class="pt-1">
+          <%-  dado.hits[i].recipe.label %>
+        </div>
+      </a>
+
+      <% }; %>
+        <% } %>
+</div>

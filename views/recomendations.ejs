@@ -1,0 +1,96 @@
+<% if(Data !=null) { %>
+    <div class="backgroundzinsuave">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    <%- Data.name %>
+                </li>
+
+            </ol>
+        </nav>
+
+
+        <div class="row">
+            <div class="col-12 col-md-4">
+                <img src='<%- Data.image %> ' style="top: 100px;" class="img-fluid sticky-top rounded"
+                    alt="<%- Data.nome %>" loading="lazy">
+            </div>
+
+            <div class="col-12 col-md-8">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>
+                            <%- Data.name %>
+                        </h1>
+                    </div>
+                    <div class="col-12 mb-4"> <img class="tagpng" src="/imagens/tag.png" alt=""><b> categoria: <%-
+                                Data.restaurant %></b></div>
+                    <div class="col-12 mb-4"><b>Postado por: Site Receitas</b></div>
+
+                    <div class="col-12" style="white-space: pre-line;">
+                        <h4>Descrição</h4>
+                        <%- Data.description%>
+                    </div>
+
+
+                </div>
+                <div class="row pt-4">
+                    <div class="col-12">
+                        <h3>Ingredientes</h3>
+                        <ul class="list-group font-weight-bold list-group-flush">
+                            <% Data.ingredients.forEach(function(ingredients) { %>
+                                <li class="list-group-item">
+                                    <%= ingredients%>
+                                </li>
+                                <% }) %>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="row pt-4">
+                    <div class="col-12">
+                
+                        <ul class="list-group font-weight-bold list-group-flush">
+                            <% Data.addresses.forEach(function(ingredients) { %>
+
+                                <div class="card p-3 py-3 mt-3 card-1 text-center">
+                                    <h4>Local Address</h4>
+                                    <div class="p-3 card-2">
+                                        <div class="p-3 card-child">
+
+                                            <div class="d-flex flex-row align-items-center">
+                                                <span class="circle">
+                                                    <i class="fa fa-home"></i>
+                                                </span>
+
+                                                <div class="d-flex flex-column ms-3">
+                                                    <h6 class="fw-bold"><%- line1 %> </h6>
+                                                    <span>  <b>LOCAL:</b> <%- line2 %> - NUMERO: <%- number %> <br>CEP: <%- CEP %>   </span>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                </div>
+
+
+                                <% }) %>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <% } %>
