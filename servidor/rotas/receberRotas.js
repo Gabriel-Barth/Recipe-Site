@@ -30,7 +30,10 @@ rotas.get("/receita/:id/deletar", receberControles.deletar_receitas);
 rotas.get("/update", receberControles.editreceita);
 rotas.post("/update", receberControles.updatereceita);
 
-rotas.get("/recomendations/:id", receberControles.showRecommendations);
+
+/* rotas.get("/recomendations/:id", receberControles.showRecommendations);
+ */
+
 
 rotas.get("/calories", receberControles.rendercalorias);
 
@@ -71,9 +74,6 @@ rotas.post("/calories", async (req, res) =>{
       data = await response.json();
 
 
-      for(var i=0; i<5; i++){
-        console.log(data.hits[i].recipe.label)
-      }
     
       res.render("calories", { Data: data });
 

@@ -41,13 +41,13 @@ exports.home = async (req, res) => {
 
 
    
-        let response = await fetch(
+    /*     let response = await fetch(
       `https://my-recomendations-api.herokuapp.com/Recomendations`
     );
     data = await response.json();  
-console.log(data)
+console.log(data) */
 
-    res.render("index", { categories, comida,  Dados : data });
+    res.render("index", { categories, comida/* ,  Dados : data  */});
 
 
   } catch (error) {
@@ -261,7 +261,7 @@ exports.redsobre = async (req, res) => {
 
 /* Our API ############################# */
 
-exports.showRecommendations = async (req, res) => {
+/* exports.showRecommendations = async (req, res) => {
   try {
     let id = req.params.id;
   
@@ -274,7 +274,11 @@ exports.showRecommendations = async (req, res) => {
   } catch (error) {
     res.status(500).send({ message: error.message || "Ocorreu um erro grave" });
   }
-};
+}; */
+
+
+
+
 /* 
 let result = data.find(x => x.id === id) */
     
