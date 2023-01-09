@@ -13,7 +13,7 @@ Nosql : MongoDb
 
 
 ## Para rodar o projeto:
-`nodemon site.js`  
+`npm start`  
 
 ## Inicia o site na porta 8081
 
